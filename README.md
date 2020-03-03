@@ -28,11 +28,12 @@
     456-
     123+
     0.==
+* 2 March 2020
+  * fixed some shit
 
 
 ## Next
-
-* fix clear button and flexgrow for clear size and key error
+* pre/post/infix
 * refactor everything using new skills; make sure to big picture plan
   * new names
 * navigation
