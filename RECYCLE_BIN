@@ -1,0 +1,9 @@
+{/*
+      <View style={styles.container}>
+        <Button
+          onPress={() => handler(value)}
+          title={value}
+          color={Colors.primary}
+        />
+      </View>
+      */}

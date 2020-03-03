@@ -3,36 +3,19 @@ import React from 'react';
 import { Text, View, Button, StyleSheet, ShadowPropTypesIOS, TouchableHighlight } from 'react-native';
 import Colors from '../constants/Colors';
 
-export default function CalcButton({ value, handleInput, flexGrow }) {
+export default function CalcButton({ value, handleInput, flexGrow=1 }) {
 
   return (
-    <>
-      {/*
-      <View style={styles.container}>
-        <Button
-          onPress={() => handler(value)}
-          title={value}
-          color={Colors.primary}
-        />
-      </View>
-      */}
-
-      <TouchableHighlight 
-        style={ [styles.container, { flexGrow: flexGrow }] }
-        onPress={() => handleInput(value)}
-      >
-        <Text style={styles.text}>
-          {value}
-        </Text>
-      </TouchableHighlight>
-
-    </>
+    <TouchableHighlight 
+      style={ [styles.container, { flexGrow: flexGrow }] }
+      onPress={ ()=>handleInput(value) }
+    >
+      <Text style={styles.text}>
+        {value}
+      </Text>
+    </TouchableHighlight>
   );
 }
-
-CalcButton.defaultProps = {
-  flexGrow: 1,
-};
 
 const styles = StyleSheet.create({
   container: {

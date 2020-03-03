@@ -8,7 +8,9 @@ export default function MainCalcDisplay({ displayText }) {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>
-        {displayText}
+        {(displayText==='')
+          ? '0'
+          : displayText}
       </Text>
     </View>
   );

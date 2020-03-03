@@ -1,9 +1,7 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import Colors from '../constants/Colors';
-
 import CalcButton from '../components/CalcButton';
-
 
 
 export default function CalcButtons({ handleInput }) {
@@ -12,14 +10,14 @@ export default function CalcButtons({ handleInput }) {
     <View style={styles.bigButtonContainer}>
       
       <View style={styles.rowContainer}> 
-        {['(', ')', '9'].map(item =>{
+        {['(', ')'].map(item =>{
           return (<CalcButton value={item} handleInput={handleInput} key={item} />);
         })}
         <CalcButton value={'CLEAR'} handleInput={handleInput} flexGrow={2} />
       </View> 
 
       <View style={styles.rowContainer}> 
-        {['^', 'log10', 'log2', '/'].map(item =>{
+        {['log10', 'log2', '^', '/'].map(item =>{
           return (<CalcButton value={item} handleInput={handleInput} key={item} /> );
         })}
       </View>
@@ -44,7 +42,7 @@ export default function CalcButtons({ handleInput }) {
 
       <View style={styles.rowContainer}> 
         {['0', '.'].map(item =>{
-            return (<CalcButton value={item} handleInput={handleInput}/> );
+            return (<CalcButton value={item} handleInput={handleInput} key={item} /> );
           })}
         <CalcButton value={'='} handleInput={handleInput} flexGrow={2} />
       </View>

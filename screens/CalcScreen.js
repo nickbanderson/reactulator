@@ -4,17 +4,22 @@ import { Text, View, StyleSheet } from 'react-native';
 import CalcDisplay from '../components/CalcDisplay';
 import CalcButtons from '../components/CalcButtons';
 import Colors from '../constants/Colors';
+import evaluate from '../util/evaluate.js'
 
 export default function CalcScreen({}) {
-  const [displayText, setDisplayText] = React.useState('0');
+  const [displayText, setDisplayText] = React.useState('');
 
   function handleInput(input) {
-    if(input=='CLEAR')
-      setDisplayText('');
-    setDisplayText( displayText.concat(input) );
-  }
-  function clearText() {
-    setDisplayText('0');
+    switch(input) {
+      case 'CLEAR':
+        setDisplayText('');
+        break;
+      case '=':
+        setDisplayText( evaluate(displayText) );
+        break;
+      default:
+        setDisplayText( displayText.concat(input) );
+    }
   }
 
   return (
@@ -24,8 +29,6 @@ export default function CalcScreen({}) {
     </View>
   );
 }
-
-
 
 const styles = StyleSheet.create({
   masterContainer: {

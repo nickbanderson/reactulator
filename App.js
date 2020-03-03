@@ -12,6 +12,7 @@ import DrawerNav from './navigation/DrawerNav';
 import CalcScreen from './screens/CalcScreen';
 
 export default function App({ skipLoadingScreen }) {
+  console.log('app rerender');
   const [isLoadingComplete, setLoadingComplete] = useState(false);
 
   if (!isLoadingComplete && !skipLoadingScreen) {

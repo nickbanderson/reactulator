@@ -21,7 +21,7 @@
     * https://stackoverflow.com/questions/53367195/invariant-violation-the-navigation-prop-is-missing-for-this-navigator
     * see DrawerNav.js
 * 1 March 2020
-  * start with simple functionality
+  * starting with simple functionality
     ()CC
     ^ln/
     789*
@@ -32,6 +32,7 @@
 
 ## Next
 
+* fix clear button and flexgrow for clear size and key error
 * refactor everything using new skills; make sure to big picture plan
   * new names
 * navigation
